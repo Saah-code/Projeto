@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Fomulário de Inscrição - Vestibular</title>
+    <style>
+        /* 🔹 Página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1cb683, #0f7a65);
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔹 Container */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #68e794;
+    box-shadow: 0 0 5px rgba(6, 190, 101, 0.5);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+
+button[type="submit"] {
+    background-color: #28a745;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+}
+
+button[type="reset"]:hover {
+    background-color: #c82333;
+}
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1> Formulário de Inscrição - Vestibular</h1>
+        <p> Preencha o formulário abaixo para se inscrever no vestibular. <br>
+            Certifique-se de fornecer informações precisas e completas.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class ="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+            <div class ="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="curso">Curso de Interesse:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso</option>
+                    <option value="administracao">Administração</option>
+                    <option value="engenharia">Engenharia</option>
+                    <option value="medicina">Medicina</option>
+                    <option value="direito">Direito</option>
+                    <option value="analise e desenvolvimento de sistemas">Análise e Desenvolvimento de Sistemas</option>
+                </select>
+
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Gênero:</label>
+                <div class="radio-group">
+                <input type="radio" id="masculino" name="genero" value="masculino" required>
+                <label for="masculino">Masculino</label>
+
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="modalidade de ingresso">Modalidade de Ingresso:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="vestibular" name="modalidade" value="vestibular">
+                    <label for="vestibular">Vestibular</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="enem" name="modalidade" value="enem">
+                    <label for="enem">ENEM</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="transferencia" name="modalidade" value="transferencia">
+                    <label for="transferencia">Transferência</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="arquivo"> Enviar Documentos:</label>
+                <input type="file" id="arquivo" name="arquivo" multiple>
+            </div>
+
+            <div class="form-group">
+                <label for="observação">Observação:</label>
+                <textarea id="observação" name="observação" rows="4" cols="50" placeholder="Digite aqui qualquer informação adicional que queira compartilhar."></textarea>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Enviar inscrição</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </form>
+    </div>
+      
+    
+</body>
+</html>
